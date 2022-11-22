@@ -55,7 +55,6 @@ public class TestBase {
 	}
 
 	public void initialization() {
-		System.out.println("im called");
 		browser = properties.getProperty("browser");
 		IMPLICIT_WAIT = Integer.parseInt(properties.getProperty("IMPLICIT_WAIT"));
 		PAGE_LOAD_TIMEOUT = Integer.parseInt(properties.getProperty("PAGE_LOAD_TIMEOUT"));

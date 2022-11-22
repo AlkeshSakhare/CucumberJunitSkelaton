@@ -4,8 +4,9 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.LoginPage;
+import testBase.TestBase;
 
-public class LoginStepDef extends LoginPage {
+public class LoginStepDef extends TestBase {
 	public static LoginPage loginPage;
 
 	@Given("User is on login page")

@@ -18,10 +18,18 @@ public class LoginPage extends TestBase {
 	WebElement loginBtn;
 
 	public void enterCredentials(String username, String password) {
-		System.out.println(username);
-		usernameTxt.sendKeys(username);
-		passwordTxt.sendKeys(password);
-		loginBtn.click();
+		try {
+			log.info(username);
+			usernameTxt.sendKeys(username);
+			Thread.sleep(1000);
+			passwordTxt.sendKeys(password);
+			Thread.sleep(2000);
+			loginBtn.click();
+			log.info(username + " is logged in successfully");
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public LoginPage() {

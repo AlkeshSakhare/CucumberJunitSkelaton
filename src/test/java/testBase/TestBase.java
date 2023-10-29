@@ -6,8 +6,8 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,9 +44,8 @@ public class TestBase {
 	public TestBase() {
 		try {
 			properties = new Properties();
-			log = Logger.getLogger(this.getClass());
+			log = LogManager.getLogger();
 			properties.load(new FileReader(userdir + "/src/test/resources/config/config.properties"));
-			PropertyConfigurator.configure(userdir + "/src/test/resources/config/log4j.properties");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -101,6 +100,7 @@ public class TestBase {
 			driver = new FirefoxDriver(foption);
 			break;
 		}
+		log.info("Opening " + browser + " browser");
 		wait = new WebDriverWait(driver, webDriverWait);
 		js = (JavascriptExecutor) driver;
 		ngWebDriver = new NgWebDriver((JavascriptExecutor) driver);
@@ -109,6 +109,13 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 //		driver.manage().timeouts().pageLoadTimeout(PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
+		log.info("Navigating to " + url);
 		driver.get(url);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }

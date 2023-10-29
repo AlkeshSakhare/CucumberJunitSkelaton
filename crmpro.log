@@ -1,0 +1,15 @@
+2023-10-29T16:37:50,981 [main] INFO  (TestBase.java:103) - Opening chrome browser
+2023-10-29T16:37:53,090 [main] INFO  (TestBase.java:112) - Navigating to https://classic.freecrm.com/
+2023-10-29T16:38:06,018 [main] INFO  (LoginStepDef.java:20) - Entering login credentials
+2023-10-29T16:38:08,780 [main] INFO  (LoginStepDef.java:26) - Click on login button
+2023-10-29T16:38:15,744 [main] INFO  (LoginStepDef.java:28) - CRMPRO
+2023-10-29T16:41:29,081 [main] INFO  (TestBase.java:103) - Opening chrome browser
+2023-10-29T16:41:30,442 [main] INFO  (TestBase.java:112) - Navigating to https://classic.freecrm.com/
+2023-10-29T16:41:41,502 [main] INFO  (LoginStepDef.java:20) - Entering login credentials
+2023-10-29T16:41:44,259 [main] INFO  (LoginStepDef.java:26) - Click on login button
+2023-10-29T16:41:51,034 [main] INFO  (LoginStepDef.java:28) - CRMPRO
+2023-10-29T16:43:42,433 [main] INFO  (TestBase.java:103) - Opening chrome browser
+2023-10-29T16:43:44,254 [main] INFO  (TestBase.java:112) - Navigating to https://classic.freecrm.com/
+2023-10-29T16:43:55,457 [main] INFO  (LoginStepDef.java:20) - Entering login credentials
+2023-10-29T16:43:58,201 [main] INFO  (LoginStepDef.java:26) - Click on login button
+2023-10-29T16:44:04,931 [main] INFO  (LoginStepDef.java:28) - CRMPRO

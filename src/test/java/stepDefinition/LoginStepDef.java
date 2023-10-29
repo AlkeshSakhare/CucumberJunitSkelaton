@@ -17,12 +17,15 @@ public class LoginStepDef extends TestBase {
 
 	@When("User enters login credentials")
 	public void user_enters_login_credentials() {
+		log.info("Entering login credentials");
 		loginPage.enterCredentials(username, password);
 	}
 
 	@Then("User login to application")
 	public void user_login_to_application() {
-		System.out.println(driver.getTitle());
+		log.info("Click on login button");
+		loginPage.clickOnLoginBtn();
+		log.info(driver.getTitle());
 	}
 
 }

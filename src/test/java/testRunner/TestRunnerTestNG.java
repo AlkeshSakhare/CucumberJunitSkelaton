@@ -11,7 +11,6 @@ import io.cucumber.testng.CucumberOptions;
 		dryRun = false,
 		monochrome = true, 
 		plugin = {"pretty", 
-				"json:target/testng/cucumber.json",
 				"html:target/testng/html/reports.html",
 			    "json:target/testng/json/reports.json", 
 				"rerun:target/testng/xml/rerun.txt",
